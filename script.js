@@ -7,8 +7,9 @@ const onGenerateSubmit = (e) => {
 
     const url = document.getElementById("url").value;
     const size = document.getElementById("size").value;
+    const color = document.getElementById("color").value;
 
-    url === "" ? alert("Please enter the URL") : generateQrCode(url, size);
+    url === "" ? alert("Please enter the URL") : generateQrCode(url, size, color);
 
     setTimeout(() => {
         const saveUrl = qr.querySelector('img').src;
@@ -16,11 +17,12 @@ const onGenerateSubmit = (e) => {
     }, 50)
 };
 
-const generateQrCode = (url, size) => {
+const generateQrCode = (url, size, color) => {
     const qrcode = new QRCode("qrcode", {
         text: url,
         width: size,
         height: size,
+        colorDark: color,
     });
 };
 
@@ -33,11 +35,11 @@ const clearUI = () => {
 const createBtn = (saveUrl) => {
     const link = document.createElement('a');
     link.id = 'save-link';
-    link.classList = 'bg-red-500 hover:bg-red-700 text-white font-bold py-2 rounded w-full m-auto my-5';
+    link.classList = 'bg-gray-600 w-1/2 rounded text-white py-3 px-4 mt-5 hover:bg-[#c55339]';
     link.href = saveUrl;
     link.download = 'qrcode';
-    link.innerHTML = 'Save Image';
-    document.getElementById('generated').appendChild(link);
+    link.innerHTML = 'Save QR Code';
+    document.getElementById('download').appendChild(link);
 }
 
 form && form.addEventListener("submit", onGenerateSubmit);
