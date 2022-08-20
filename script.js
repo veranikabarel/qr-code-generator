@@ -1,5 +1,6 @@
 const form = document.getElementById("generate");
 const qr = document.getElementById("qrcode");
+const download = document.getElementById("download");
 
 const onGenerateSubmit = (e) => {
     e.preventDefault();
@@ -14,6 +15,7 @@ const onGenerateSubmit = (e) => {
     setTimeout(() => {
         const saveUrl = qr.querySelector('img').src;
         createBtn(saveUrl);
+        addLinkText(url, color);
     }, 50)
 };
 
@@ -28,6 +30,7 @@ const generateQrCode = (url, size, color) => {
 
 const clearUI = () => {
     qr.innerHTML = '';
+    download.innerHTML = '';
     const saveQR = document.getElementById('save-link');
     saveQR && saveQR.remove();
 }
@@ -40,6 +43,14 @@ const createBtn = (saveUrl) => {
     link.download = 'qrcode';
     link.innerHTML = 'Save QR Code';
     document.getElementById('download').appendChild(link);
+}
+
+const addLinkText = (url, color) => {
+    const linkText = document.createElement('p');
+    linkText.id = 'link-text';
+    linkText.classList = 'text-bold mt-5';
+    linkText.innerHTML = `This is a QR Code in ${color} color for ${url} website.`;
+    document.getElementById('download').appendChild(linkText);
 }
 
 form && form.addEventListener("submit", onGenerateSubmit);
