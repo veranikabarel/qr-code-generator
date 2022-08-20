@@ -5,10 +5,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QR Code Generator</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
-        integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,6 +17,10 @@
             },
         };
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+        integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>QR Code Generator</title>
 </head>
 
 <body>
@@ -54,11 +54,10 @@
             <div class="w-full md:w-2/3 p-10">
                 <img src="assets/code.jpg" alt="qr code" class="w-1/2 m-auto md:w-full">
             </div>
-            <div class="max-w-5xl m-auto flex flex-col text-xenter align-center justify-center mt-20">
+            <div id='generated' class="max-w-5xl m-auto flex flex-col text-xenter align-center justify-center mt-20">
                 <div id="qrcode" class="m-auto"></div>
             </div>
     </main>
-
     <script src="script.js"></script>
 </body>
 
