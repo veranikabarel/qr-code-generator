@@ -3,7 +3,7 @@
 ## Table of contents
 
 - [General info](#general-info)
-- [Screenshot] (#screenshot)
+- [Screenshots](#screenshots)
 - [Technologies](#technologies)
 - [Demo](#installation-and-running)
 - [Status](#status)
@@ -13,15 +13,15 @@
 
 A small project in vanilla js that allows you to generate a QR code from a link. You can also pick different color and size for your QR code.
 
-## Screenshot
+## Screenshots
 
 ## Demo
 
-Check the [demo here]().
+Check the [demo here](https://sprightly-kelpie-993b89.netlify.app/).
 
 ## Technologies
 
-- [Tailwind](https://github.com/facebook/create-react-app)
+- [Tailwind](https://github.com/tailwindlabs/tailwindcss)
 
 ## Credits
 
