@@ -14,6 +14,7 @@
 A small project in vanilla js that allows you to generate a QR code from a link. You can also pick different color and size for your QR code.
 
 ## Screenshots
+![screenshot](https://user-images.githubusercontent.com/48052206/185786331-56010fd3-f611-4701-aae8-2369afe92726.png)
 
 ## Demo
 
