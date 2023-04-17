@@ -4,9 +4,8 @@
 
 - [General info](#general-info)
 - [Screenshots](#screenshots)
+- [Demo](#demo)
 - [Technologies](#technologies)
-- [Demo](#installation-and-running)
-- [Status](#status)
 - [Credits](#credits)
 
 ## General info
